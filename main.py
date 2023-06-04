@@ -9,7 +9,7 @@ def word_count(string):
 def char_map(string):
     chars = {}
     for char in string.lower():
-        if char not in "abcdefghijklmnopqrstuvwxyz":
+        if not char.isalpha():
             continue
         if char in chars:
             chars[char] += 1
