@@ -16,8 +16,10 @@ def char_map(string):
             continue
         chars[char] = 1
     return chars
-chars = char_map(file_contents)
-print(f"{word_count(file_contents)} words found in the document")
 
+chars = char_map(file_contents)
+print("--- Begin report of books.frankenstein.txt ---")
+print(f"{word_count(file_contents)} words found in the document")
 for char, count in chars.items():
     print(f"The {char} character was found {count} times")
+print("--- End report ---")
