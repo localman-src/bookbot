@@ -6,15 +6,6 @@ words = len(file_contents.lower().split())
 def word_count(string):
     return len(string.lower().split())
 
-def word_map(words):
-    wordcount = {}
-    for word in words:
-        if word in wordcount:
-            wordcount[word] += 1
-            continue
-        wordcount[word] = 1
-    return wordcount
-
 def char_map(string):
     chars = {}
     for char in string.lower():
