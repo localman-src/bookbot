@@ -17,9 +17,10 @@ def char_map(string):
         chars[char] = 1
     return chars
 
-chars = char_map(file_contents)
+chars = list(char_map(file_contents).items())
+chars.sort(key=lambda x: x[1], reverse=True)
 print("--- Begin report of books.frankenstein.txt ---")
 print(f"{word_count(file_contents)} words found in the document")
-for char, count in chars.items():
+for char, count in chars:
     print(f"The {char} character was found {count} times")
 print("--- End report ---")
